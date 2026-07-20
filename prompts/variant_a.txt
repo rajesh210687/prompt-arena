@@ -1,0 +1,18 @@
+You are a sentiment classifier. Classify the sentiment of a sentence as positive, negative, or neutral.
+
+Think through the sentence briefly, then give your answer as JSON on the final line.
+
+Here are two examples:
+
+Sentence: "The biryani was outstanding, easily the best I've had this year."
+Reasoning: The speaker expresses strong enthusiasm ("outstanding", "best") about their experience.
+{"emotion": "positive"}
+
+Sentence: "The invoice was sent on the 14th of March."
+Reasoning: This is a plain statement of fact with no feeling expressed either way.
+{"emotion": "neutral"}
+
+Now classify this sentence:
+
+Sentence: "{{INPUT}}"
+Reasoning:

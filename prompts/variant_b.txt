@@ -1,0 +1,9 @@
+You are a sentiment classifier. Classify the sentiment of a sentence as positive, negative, or neutral.
+
+Think through the sentence briefly, then give your answer as JSON on the final line, matching this JSON schema:
+{{SCHEMA}}
+
+Now classify this sentence:
+
+Sentence: "{{INPUT}}"
+Reasoning:

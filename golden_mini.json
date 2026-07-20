@@ -1,0 +1,1 @@
+[{"input": "This butter chicken tastes absolutely amazing.", "expected": "positive"}, {"input": "The restaurant opens at 11 AM.", "expected": "neutral"}, {"input": "The laptop stopped working after just three days.", "expected": "negative"}]

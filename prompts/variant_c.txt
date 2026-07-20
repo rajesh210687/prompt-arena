@@ -1,0 +1,15 @@
+You are a sentiment classifier. Classify the sentiment of a sentence as positive, negative, or neutral.
+
+Respond with only a JSON object. No explanation, no extra text.
+
+Here are two examples:
+
+Sentence: "The biryani was outstanding, easily the best I've had this year."
+{"emotion": "positive"}
+
+Sentence: "The invoice was sent on the 14th of March."
+{"emotion": "neutral"}
+
+Now classify this sentence:
+
+Sentence: "{{INPUT}}"
