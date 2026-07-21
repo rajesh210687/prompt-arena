@@ -12,7 +12,7 @@ client = anthropic.Anthropic()  # reads ANTHROPIC_API_KEY from env
 from prompt_builder import load_prompt, build_prompt
 from metrics import evaluate_response
 
-MODEL = "claude-sonnet-4-6"
+MODEL = "claude-haiku-4-5-20251001"
 
 def call_llm(prompt: str) -> str:
     response = client.messages.create(
@@ -49,14 +49,14 @@ def run_variant(variant_name: str) -> None:
             "latency_ms": latency_ms,
             **verdict,
         })
-        print(f"  [{i+1:2d}/30] {'✅' if verdict['score'] else '❌'} {ex['input'][:40]}")
+        print(f"  [{i+1:2d}/40] {'✅' if verdict['score'] else '❌'} {ex['input'][:40]}")
 
     out_path = Path(f"results/variant_{variant_name}_run_1.json")
     out_path.write_text(json.dumps(results, indent=2))
 
     total = sum(r["score"] for r in results)
     parse_fails = sum(1 for r in results if r["failure"] in ("no_json", "invalid_schema"))
-    print(f"\nVariant {variant_name.upper()}: {total}/30 correct, "
+    print(f"\nVariant {variant_name.upper()}: {total}/40 correct, "
           f"{parse_fails} parse failures → {out_path}")
 
 if __name__ == "__main__":

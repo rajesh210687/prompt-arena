@@ -1,0 +1,18 @@
+You are a sentiment classifier. Classify the sentiment of a sentence as positive, negative, or neutral.
+
+Think through the sentence briefly, then give your answer as JSON on the final line.
+
+Here are two examples:
+
+Sentence: "Oh great, my internet disconnected just as I clicked submit."
+Reasoning: The phrase "Oh great" is sarcastic—the event being described is clearly frustrating, so the overall sentiment is negative.
+{"emotion": "negative"}
+
+Sentence: "The restaurant wasn't bad, actually."
+Reasoning: This is an understatement. Although phrased as a negation, the speaker is expressing mild approval, making the overall sentiment positive.
+{"emotion": "positive"}
+
+Now classify this sentence:
+
+Sentence: "{{INPUT}}"
+Reasoning:
